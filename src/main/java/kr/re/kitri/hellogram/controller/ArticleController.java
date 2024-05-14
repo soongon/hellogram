@@ -1,7 +1,7 @@
 package kr.re.kitri.hellogram.controller;
 
 import kr.re.kitri.hellogram.service.ArticleService;
-import org.springframework.beans.factory.annotation.Autowired;
+import kr.re.kitri.hellogram.service.ArticleServiceImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
