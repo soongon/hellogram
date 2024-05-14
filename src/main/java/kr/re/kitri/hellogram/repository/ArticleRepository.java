@@ -1,5 +1,6 @@
 package kr.re.kitri.hellogram.repository;
 
+import kr.re.kitri.hellogram.model.Article;
 import org.springframework.stereotype.Repository;
 
 // 테이블만 바라보는 바보
@@ -17,5 +18,12 @@ public class ArticleRepository {
     public String selectArticleDetailsById(String articleId) {
         // 실제 쿼리 수행
         return articleId + "번 글 상세내용입니다.";
+    }
+
+    public String insertArticle(Article article) {
+        // 실제로 aritlce 데이터를 데이터베이스에 인서트 수행..
+        // insert into article values(.......)
+        System.out.println("레파지토리 로그: " + article);
+        return "잘 인서트 됬습니다.";
     }
 }

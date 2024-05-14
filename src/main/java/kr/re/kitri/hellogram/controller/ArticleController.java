@@ -1,10 +1,9 @@
 package kr.re.kitri.hellogram.controller;
 
+import kr.re.kitri.hellogram.model.Article;
 import kr.re.kitri.hellogram.service.ArticleService;
 import kr.re.kitri.hellogram.service.ArticleServiceImpl;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ArticleController {
@@ -31,5 +30,10 @@ public class ArticleController {
         return articleService.getArticleById(articleId);
     }
 
+    // 글쓰기
+    @PostMapping("/articles")
+    public String writeArticle(@RequestBody Article article) {
+        return articleService.writeArticle(article);
+    }
 
 }
