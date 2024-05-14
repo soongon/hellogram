@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleService {
 
-    @Autowired
-    private ArticleRepository articleRepository;
+    private final ArticleRepository articleRepository;
+
+    public ArticleService(ArticleRepository articleRepository) {
+        this.articleRepository = articleRepository;
+    }
 
     // 전체 글보기
     public String getAllArticles() {

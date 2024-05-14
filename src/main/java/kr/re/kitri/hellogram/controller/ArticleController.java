@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ArticleController {
 
-    @Autowired
-    private ArticleService articleService;
+    private final ArticleService articleService;
+
+    public ArticleController(ArticleService articleService) {
+        this.articleService = articleService;
+    }
 
     // 글 전체보기
     @GetMapping("/articles")
