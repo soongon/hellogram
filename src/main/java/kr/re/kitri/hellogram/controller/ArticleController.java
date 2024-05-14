@@ -26,8 +26,9 @@ public class ArticleController {
     @GetMapping("/articles/{articleId}")
     public String articleDetails(@PathVariable String articleId) {
         // {articleID} 에 해당되는 변수를 가져온다.
+        // aricleID로 글 상세보기 조회해줘
         System.out.println(articleId);
-        return "글 번호는 " + articleId;
+        return articleService.getArticleById(articleId);
     }
 
 

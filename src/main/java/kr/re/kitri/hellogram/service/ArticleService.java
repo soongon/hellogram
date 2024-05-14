@@ -20,6 +20,10 @@ public class ArticleService {
     }
 
     // 글 상세보기
+    public String getArticleById(String articleId) {
+        // 글번호 줄게 실제 데이터베이스 조회해서 글상세내용 갖다줘..
+        return articleRepository.selectArticleDetailsById(articleId);
+    }
 
     // 글 수정
 

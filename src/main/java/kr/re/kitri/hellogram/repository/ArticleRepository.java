@@ -12,4 +12,10 @@ public class ArticleRepository {
         // 실제 쿼리 수행
         return "디비에서 데이터 가져와서 전달합니다.";
     }
+
+    // 글상세보기 by 글번호
+    public String selectArticleDetailsById(String articleId) {
+        // 실제 쿼리 수행
+        return articleId + "번 글 상세내용입니다.";
+    }
 }
